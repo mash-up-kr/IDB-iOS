@@ -6,6 +6,7 @@ target 'IDB' do
   use_frameworks!
 
   # Pods for IDB
+    pod 'Alamofire', '~> 4.5’
 
   target 'IDBTests' do
     inherit! :search_paths

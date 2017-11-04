@@ -3,7 +3,7 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-IDB/build/
+IDB/build/**
 IDB/DerivedData/
 
 ## Various settings
@@ -15,8 +15,8 @@ IDB/*.mode2v3
 !default.mode2v3
 IDB/*.perspectivev3
 !default.perspectivev3
-IDB/xcuserdata/
-
+IDB/IDB.xcworkspace/xcuserdata/**
+IDB/IDB.xcodeproj/**
 ## Other
 IDB/*.moved-aside
 IDB/*.xccheckout
@@ -34,4 +34,4 @@ IDB/*.dSYM
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-IDB/Pods/
+IDB/Pods/**
