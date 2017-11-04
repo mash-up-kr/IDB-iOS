@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import Alamofire
 
 class TabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        let params: [String: String] = [:]
+
+        
+
+        APIManager.request(apiRequest: TestAPI.test(params: params), responseHandler: { response in
+            switch response {
+            case .success(let jsonResponse):
+                print(jsonResponse)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+
     }
 
     override func didReceiveMemoryWarning() {
