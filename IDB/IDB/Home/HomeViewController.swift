@@ -13,6 +13,9 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     
     override func viewDidLoad() {
         setSetting()
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, _, changeCurrentIndex: Bool, _) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = .black
@@ -39,10 +42,10 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let child1 = ContentViewController()
-        child1.indicatorInfo.title = "기술"
+        child1.indicatorInfo.title = "추천"
         
         let child2 = ContentViewController()
-        child2.indicatorInfo.title = "IT"
+        child2.indicatorInfo.title = "디자인"
         
         return [child1, child2]
     }
