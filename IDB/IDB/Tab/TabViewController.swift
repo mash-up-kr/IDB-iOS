@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  TabViewController.swift
 //  IDB
 //
 //  Created by Daeyun Ethan Kim on 04/11/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UITabBarController {
+class TabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,4 @@ class HomeViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
