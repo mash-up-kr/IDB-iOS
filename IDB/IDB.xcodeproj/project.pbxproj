@@ -18,6 +18,7 @@
 		82C05E8F1FADEBF50080528D /* AlamofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C05E8E1FADEBF50080528D /* AlamofireRequest.swift */; };
 		82C05EA11FAE06960080528D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C05EA01FAE06500080528D /* Home.storyboard */; };
 		82C05EA31FAE06C20080528D /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C05EA21FAE06C20080528D /* HttpMethod.swift */; };
+		82C05EA71FAE212F0080528D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C05EA61FAE212F0080528D /* HistoryViewController.swift */; };
 		AA144AB51FADAF5E001E1FD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA144AB41FADAF5E001E1FD8 /* AppDelegate.swift */; };
 		AA144AB71FADAF5E001E1FD8 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA144AB61FADAF5E001E1FD8 /* TabViewController.swift */; };
 		AA144ABA1FADAF5E001E1FD8 /* Tab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA144AB81FADAF5E001E1FD8 /* Tab.storyboard */; };
@@ -60,6 +61,7 @@
 		82C05E8E1FADEBF50080528D /* AlamofireRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequest.swift; sourceTree = "<group>"; };
 		82C05EA01FAE06500080528D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		82C05EA21FAE06C20080528D /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HttpMethod.swift; path = "/Users/woowahan/Documents/xCodeProject/IDB-iOS/IDB/IDB/Common/Manager/APIManager/HttpMethod.swift"; sourceTree = "<absolute>"; };
+		82C05EA61FAE212F0080528D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A4AB32B0CA54FD6498EC69E2 /* Pods-IDBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDBUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDBUITests/Pods-IDBUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA144AB11FADAF5E001E1FD8 /* IDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA144AB41FADAF5E001E1FD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				804B8BDC1FADD837007CA561 /* History.storyboard */,
+				82C05EA61FAE212F0080528D /* HistoryViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				82C05EA31FAE06C20080528D /* HttpMethod.swift in Sources */,
 				82C05E831FADD9E90080528D /* APIManager.swift in Sources */,
 				AA144AB51FADAF5E001E1FD8 /* AppDelegate.swift in Sources */,
+				82C05EA71FAE212F0080528D /* HistoryViewController.swift in Sources */,
 				82C05E891FADE17F0080528D /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
