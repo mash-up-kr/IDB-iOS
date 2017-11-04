@@ -67,7 +67,6 @@ extension ContentViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContentVideoCell", for: indexPath) as! ContentVideoCell
         let content = contents[indexPath.row]
         let ratedCount = content.rated.count
-        print(">>\(ratedCount)")
         
         cell.titleLabel.text = content.title
         cell.descriptionLabel.text = content.speakerName
