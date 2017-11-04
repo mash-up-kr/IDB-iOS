@@ -6,8 +6,9 @@ target 'IDB' do
   use_frameworks!
 
   # Pods for IDB
-    pod 'Alamofire', '~> 4.5’
+    pod 'Alamofire', '~> 4.5'
     pod 'XLPagerTabStrip', '~> 8.0'
+    pod 'SwiftyJSON'
 
   target 'IDBTests' do
     inherit! :search_paths

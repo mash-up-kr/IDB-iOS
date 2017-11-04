@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-462" y="211"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="AYb-pG-dC3">
             <objects>
-                <viewController id="81m-tq-J6C" sceneMemberID="viewController">
+                <viewController id="81m-tq-J6C" customClass="HomeViewController" customModule="IDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Qg-Ml-7ha">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,9 @@
                         <viewLayoutGuide key="safeArea" id="rug-le-M9M"/>
                     </view>
                     <navigationItem key="navigationItem" id="7l3-GH-MGu"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="f42-Av-oJd" id="VlW-2w-ljC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5H-iN-fsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

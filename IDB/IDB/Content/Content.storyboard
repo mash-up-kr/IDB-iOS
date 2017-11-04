@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="H6t-1I-NbD">
             <objects>
-                <viewController id="wow-NS-7UR" sceneMemberID="viewController">
+                <viewController id="wow-NS-7UR" customClass="ContentViewController" customModule="IDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eo1-Ub-dgd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +68,20 @@
                                                         <constraint firstItem="abd-mo-Sn3" firstAttribute="top" secondItem="lMx-gu-sCH" secondAttribute="top" constant="10" id="geS-Hj-f2T"/>
                                                         <constraint firstItem="kqf-Gd-t5l" firstAttribute="leading" secondItem="lMx-gu-sCH" secondAttribute="leading" constant="10" id="ysH-i4-GZW"/>
                                                     </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezE-45-MSC">
+                                                    <rect key="frame" x="6" y="143" width="54" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYy-90-umL">
+                                                            <rect key="frame" x="8" y="3" width="42" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
