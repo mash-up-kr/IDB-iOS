@@ -47,21 +47,18 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-VZ-6Sg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltO-gm-yUw">
                                 <rect key="frame" x="0.0" y="104" width="375" height="563"/>
-                                <connections>
-                                    <segue destination="cjh-Rv-sPU" kind="embed" id="Pdj-UC-6EU"/>
-                                </connections>
-                            </containerView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6ov-VZ-6Sg" firstAttribute="top" secondItem="f42-Av-oJd" secondAttribute="bottom" id="N5U-sW-IPC"/>
+                            <constraint firstItem="rug-le-M9M" firstAttribute="trailing" secondItem="ltO-gm-yUw" secondAttribute="trailing" id="8ro-pD-ohY"/>
+                            <constraint firstItem="ltO-gm-yUw" firstAttribute="top" secondItem="f42-Av-oJd" secondAttribute="bottom" id="Hsk-hJ-heX"/>
                             <constraint firstItem="f42-Av-oJd" firstAttribute="leading" secondItem="rug-le-M9M" secondAttribute="leading" id="Yfo-JS-Xkt"/>
+                            <constraint firstItem="rug-le-M9M" firstAttribute="bottom" secondItem="ltO-gm-yUw" secondAttribute="bottom" id="dKv-Pn-xgD"/>
                             <constraint firstItem="rug-le-M9M" firstAttribute="trailing" secondItem="f42-Av-oJd" secondAttribute="trailing" id="fzu-OF-7uM"/>
-                            <constraint firstItem="6ov-VZ-6Sg" firstAttribute="leading" secondItem="rug-le-M9M" secondAttribute="leading" id="i6m-A4-yd7"/>
-                            <constraint firstItem="rug-le-M9M" firstAttribute="trailing" secondItem="6ov-VZ-6Sg" secondAttribute="trailing" id="ngZ-Lm-3eU"/>
-                            <constraint firstItem="6ov-VZ-6Sg" firstAttribute="bottom" secondItem="rug-le-M9M" secondAttribute="bottom" id="qsi-8l-2eU"/>
+                            <constraint firstItem="ltO-gm-yUw" firstAttribute="leading" secondItem="rug-le-M9M" secondAttribute="leading" id="iiY-Ea-7Aa"/>
                             <constraint firstItem="f42-Av-oJd" firstAttribute="top" secondItem="rug-le-M9M" secondAttribute="top" id="v6F-FX-1dx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rug-le-M9M"/>
@@ -69,19 +66,12 @@
                     <navigationItem key="navigationItem" title="콘텐츠" id="7l3-GH-MGu"/>
                     <connections>
                         <outlet property="buttonBarView" destination="f42-Av-oJd" id="VlW-2w-ljC"/>
+                        <outlet property="containerView" destination="ltO-gm-yUw" id="Slb-uZ-yM2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5H-iN-fsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="261.60000000000002" y="210.94452773613196"/>
-        </scene>
-        <!--Content-->
-        <scene sceneID="kf2-PX-zbb">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e7X-ow-oPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="Content" id="cjh-Rv-sPU" sceneMemberID="viewController"/>
-            </objects>
-            <point key="canvasLocation" x="914" y="210"/>
         </scene>
     </scenes>
 </document>

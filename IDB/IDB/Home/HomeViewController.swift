@@ -41,13 +41,15 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     // MARK: - PagerTabStripDataSource
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let child1 = ContentViewController()
-        child1.indicatorInfo.title = "추천"
+        let child1Storyboard = UIStoryboard(name: "Content", bundle: nil)
+        let child1ViewController = child1Storyboard.instantiateInitialViewController() as!  ContentViewController
+        child1ViewController.indicatorInfo.title = "추천"
         
-        let child2 = ContentViewController()
-        child2.indicatorInfo.title = "디자인"
+        let child2Storyboard = UIStoryboard(name: "Content", bundle: nil)
+        let child2ViewController = child2Storyboard.instantiateInitialViewController() as!  ContentViewController
+        child2ViewController.indicatorInfo.title = "디자인"
         
-        return [child1, child2]
+        return [child1ViewController, child2ViewController]
     }
     
 }
