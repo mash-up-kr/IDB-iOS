@@ -11,7 +11,7 @@ import Alamofire
 
 enum ContentAPI: API {
     
-    case home(params: [String: String])
+    case home(path: String)
     
     var method: HTTPMethod {
         switch self {
@@ -21,13 +21,21 @@ enum ContentAPI: API {
     }
     
     var path: String {
-        return "/home"
+        switch self {
+        case .home(let path):
+            if path == "TODAY" || path == "ENTERTAIN" || path == "TECH"  {
+                return "/home"
+            } else {
+                return "/home/\(path)"
+            }
+        }
+
     }
     
     var parameters: [String : Any] {
         switch self {
-        case .home(let params):
-            return params
+        case .home:
+            return [:]
         }
     }
     

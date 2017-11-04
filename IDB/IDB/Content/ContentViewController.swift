@@ -19,6 +19,7 @@ class ContentViewController: UIViewController, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(indicatorInfo.title)
         loadHistoryList()
     }
     
@@ -28,7 +29,7 @@ class ContentViewController: UIViewController, IndicatorInfoProvider {
     
     func loadHistoryList() {
         
-        APIManager.request(apiRequest: ContentAPI.home(params: [:])) { [weak self] result in
+        APIManager.request(apiRequest: ContentAPI.home(path: indicatorInfo.title!)) { [weak self] result in
             switch result {
             case .success(let response):
                 guard let cotentCount = response.dictionaryValue["items"]?.array?.count else {
