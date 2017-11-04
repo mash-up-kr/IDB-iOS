@@ -13,6 +13,7 @@
 		804B8BE51FADDA48007CA561 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804B8BE41FADDA48007CA561 /* Home.storyboard */; };
 		804B8BE71FADDA57007CA561 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804B8BE61FADDA57007CA561 /* Content.storyboard */; };
 		804B8BE91FADDA6E007CA561 /* TimeSet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804B8BE81FADDA6E007CA561 /* TimeSet.storyboard */; };
+		804B8C0E1FAE00A7007CA561 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B8C0D1FAE00A7007CA561 /* HomeViewController.swift */; };
 		AA144AB51FADAF5E001E1FD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA144AB41FADAF5E001E1FD8 /* AppDelegate.swift */; };
 		AA144AB71FADAF5E001E1FD8 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA144AB61FADAF5E001E1FD8 /* TabViewController.swift */; };
 		AA144ABA1FADAF5E001E1FD8 /* Tab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA144AB81FADAF5E001E1FD8 /* Tab.storyboard */; };
@@ -50,6 +51,7 @@
 		804B8BE41FADDA48007CA561 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		804B8BE61FADDA57007CA561 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		804B8BE81FADDA6E007CA561 /* TimeSet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeSet.storyboard; sourceTree = "<group>"; };
+		804B8C0D1FAE00A7007CA561 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4AB32B0CA54FD6498EC69E2 /* Pods-IDBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDBUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDBUITests/Pods-IDBUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA144AB11FADAF5E001E1FD8 /* IDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA144AB41FADAF5E001E1FD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		804B8BE31FADDA17007CA561 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				804B8C0D1FAE00A7007CA561 /* HomeViewController.swift */,
 				804B8BE41FADDA48007CA561 /* Home.storyboard */,
 			);
 			path = Home;
@@ -497,10 +500,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IDB/Pods-IDB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -516,6 +521,7 @@
 			files = (
 				AA144AB71FADAF5E001E1FD8 /* TabViewController.swift in Sources */,
 				AA144AB51FADAF5E001E1FD8 /* AppDelegate.swift in Sources */,
+				804B8C0E1FAE00A7007CA561 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +722,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YBHS36EVG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IDBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KD.IDBTests;
@@ -734,7 +740,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YBHS36EVG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IDBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KD.IDBTests;
@@ -751,7 +757,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YBHS36EVG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IDBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KD.IDBUITests;
@@ -768,7 +774,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YBHS36EVG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IDBUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KD.IDBUITests;
