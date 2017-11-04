@@ -23,6 +23,7 @@
 		804B8BDD1FADD837007CA561 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804B8BDC1FADD837007CA561 /* History.storyboard */; };
 		804B8BE71FADDA57007CA561 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804B8BE61FADDA57007CA561 /* Content.storyboard */; };
 		804B8BE91FADDA6E007CA561 /* TimeSet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804B8BE81FADDA6E007CA561 /* TimeSet.storyboard */; };
+		80871A8A1FAE53E00071A7A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80432BFC1FAE1A1600A87F77 /* HomeViewController.swift */; };
 		82C05E831FADD9E90080528D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C05E821FADD9E90080528D /* APIManager.swift */; };
 		82C05E891FADE17F0080528D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C05E881FADE17F0080528D /* API.swift */; };
 		82C05E8B1FADE3650080528D /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C05E8A1FADE3650080528D /* TestAPI.swift */; };
@@ -631,6 +632,7 @@
 				80432BFF1FAE1B2900A87F77 /* ContentViewController.swift in Sources */,
 				80432C1A1FAE47A400A87F77 /* TimePickerView.swift in Sources */,
 				80432C181FAE47A400A87F77 /* FavoritTimeCollectionViewCell.swift in Sources */,
+				80871A8A1FAE53E00071A7A2 /* HomeViewController.swift in Sources */,
 				AA144AB71FADAF5E001E1FD8 /* TabViewController.swift in Sources */,
 				82C05EAF1FAE27950080528D /* HistoryViewModel.swift in Sources */,
 				80432C1D1FAE47A400A87F77 /* AddFavoritTimeViewController.swift in Sources */,

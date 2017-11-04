@@ -11,8 +11,14 @@ import XLPagerTabStrip
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
     
+    @IBOutlet weak var homeButtonBarView: ButtonBarView!
+    @IBOutlet weak var homeScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         setSetting()
+        
+        buttonBarView = homeButtonBarView
+        containerView = homeScrollView
         
         navigationController?.navigationBar.shadowImage = UIImage()
         

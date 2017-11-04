@@ -17,8 +17,6 @@ class TabViewController: UITabBarController {
 
         let params: [String: String] = [:]
 
-        
-
         APIManager.request(apiRequest: TestAPI.test(params: params), responseHandler: { response in
             switch response {
             case .success(let jsonResponse):
@@ -27,7 +25,6 @@ class TabViewController: UITabBarController {
                 print(error.localizedDescription)
             }
         })
-
     }
 
     override func didReceiveMemoryWarning() {
