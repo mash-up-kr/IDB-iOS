@@ -42,6 +42,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
+        settings.style.buttonBarItemFont = UIFont(name: "Helvetica Neue", size: 10)!
     }
     
     // MARK: - PagerTabStripDataSource
@@ -49,13 +50,25 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let child1Storyboard = UIStoryboard(name: "Content", bundle: nil)
         let child1ViewController = child1Storyboard.instantiateInitialViewController() as!  ContentViewController
-        child1ViewController.indicatorInfo.title = "추천"
+        child1ViewController.indicatorInfo.title = "TODAY"
         
         let child2Storyboard = UIStoryboard(name: "Content", bundle: nil)
         let child2ViewController = child2Storyboard.instantiateInitialViewController() as!  ContentViewController
-        child2ViewController.indicatorInfo.title = "디자인"
+        child2ViewController.indicatorInfo.title = "TECH"
         
-        return [child1ViewController, child2ViewController]
+        let child3Storyboard = UIStoryboard(name: "Content", bundle: nil)
+        let child3ViewController = child3Storyboard.instantiateInitialViewController() as!  ContentViewController
+        child3ViewController.indicatorInfo.title = "ENTERTAIN"
+        
+        let child4Storyboard = UIStoryboard(name: "Content", bundle: nil)
+        let child4ViewController = child4Storyboard.instantiateInitialViewController() as!  ContentViewController
+        child4ViewController.indicatorInfo.title = "DESIGN"
+        
+        let child5Storyboard = UIStoryboard(name: "Content", bundle: nil)
+        let child5ViewController = child5Storyboard.instantiateInitialViewController() as!  ContentViewController
+        child5ViewController.indicatorInfo.title = "BUSINESS"
+        
+        return [child1ViewController, child2ViewController, child3ViewController, child4ViewController, child5ViewController]
     }
     
 }
