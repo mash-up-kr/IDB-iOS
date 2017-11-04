@@ -25,12 +25,12 @@ class HistoryViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
 
-        imageView.layer.shadowColor = UIColor.purple.cgColor
-        imageView.layer.shadowRadius = 1
-        imageView.layer.shadowOpacity = 0.5
-        imageView.layer.shadowOffset = CGSize(width: 5, height: 5)
+//        imageView.layer.shadowColor = UIColor.purple.cgColor
+//        imageView.layer.shadowRadius = 1
+//        imageView.layer.shadowOpacity = 0.5
+//        imageView.layer.shadowOffset = CGSize(width: 5, height: 5)
 
-        viewModel.loadHistoryList()
+        viewModel.loadHistoryList()	
 //        imageView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 10, height: (imageView.superview?.bounds.height)!)).cgPath
     }
 
@@ -68,7 +68,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 100
     }
 }
 
