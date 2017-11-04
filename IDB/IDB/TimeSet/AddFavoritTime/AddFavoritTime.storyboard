@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tf6-ij-8Gp">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Favorit Time View Controller-->
+        <scene sceneID="1fR-QS-duG">
+            <objects>
+                <viewController storyboardIdentifier="AddFavoritTimeViewController" id="tf6-ij-8Gp" customClass="AddFavoritTimeViewController" customModule="IDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1uV-PL-6md">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tk-LP-YY0">
+                                <rect key="frame" x="268" y="430" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Spz-MB-sJA" customClass="TimePickerView" customModule="IDB" customModuleProvider="target">
+                                <rect key="frame" x="60" y="290" width="200" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="PJk-54-qOC"/>
+                                    <constraint firstAttribute="width" constant="200" id="QEf-mS-KaT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDT-3h-zUQ">
+                                <rect key="frame" x="0.0" y="690" width="414" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="tf6-ij-8Gp" eventType="touchUpInside" id="Ahb-Sh-Yhy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="어디 인가요?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJb-uq-PbF">
+                                <rect key="frame" x="40" y="180" width="334" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XWR-2j-fIl">
+                                <rect key="frame" x="16" y="80" width="382" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="TGa-Il-RsI"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PB5-Wu-vko">
+                                    <size key="itemSize" width="80" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tf6-ij-8Gp" id="M3Q-56-R1A"/>
+                                    <outlet property="delegate" destination="tf6-ij-8Gp" id="KDl-i5-RWS"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NJb-uq-PbF" firstAttribute="top" secondItem="XWR-2j-fIl" secondAttribute="bottom" constant="20" id="7KV-xr-uai"/>
+                            <constraint firstItem="3Tk-LP-YY0" firstAttribute="leading" secondItem="Spz-MB-sJA" secondAttribute="trailing" constant="8" id="8Vb-MR-PSw"/>
+                            <constraint firstItem="Spz-MB-sJA" firstAttribute="top" secondItem="NJb-uq-PbF" secondAttribute="bottom" constant="80" id="9kg-jU-QdP"/>
+                            <constraint firstItem="OTS-gm-ZbQ" firstAttribute="trailing" secondItem="MDT-3h-zUQ" secondAttribute="trailing" id="A6q-cu-EpD"/>
+                            <constraint firstItem="Spz-MB-sJA" firstAttribute="leading" secondItem="OTS-gm-ZbQ" secondAttribute="leading" constant="60" id="DnE-m6-PTr"/>
+                            <constraint firstItem="MDT-3h-zUQ" firstAttribute="top" secondItem="Spz-MB-sJA" secondAttribute="bottom" constant="100" id="USJ-lE-fap"/>
+                            <constraint firstItem="MDT-3h-zUQ" firstAttribute="leading" secondItem="1uV-PL-6md" secondAttribute="leading" id="WQf-AH-UKB"/>
+                            <constraint firstItem="NJb-uq-PbF" firstAttribute="leading" secondItem="OTS-gm-ZbQ" secondAttribute="leading" constant="40" id="ZIp-7Q-ilG"/>
+                            <constraint firstItem="XWR-2j-fIl" firstAttribute="leading" secondItem="OTS-gm-ZbQ" secondAttribute="leading" constant="16" id="c5b-bu-rG6"/>
+                            <constraint firstItem="OTS-gm-ZbQ" firstAttribute="trailing" secondItem="XWR-2j-fIl" secondAttribute="trailing" constant="16" id="i3u-sS-Ppi"/>
+                            <constraint firstItem="OTS-gm-ZbQ" firstAttribute="bottom" secondItem="MDT-3h-zUQ" secondAttribute="bottom" constant="16" id="j9m-9E-yhn"/>
+                            <constraint firstItem="OTS-gm-ZbQ" firstAttribute="trailing" secondItem="NJb-uq-PbF" secondAttribute="trailing" constant="40" id="km8-kQ-gwA"/>
+                            <constraint firstItem="Spz-MB-sJA" firstAttribute="centerY" secondItem="3Tk-LP-YY0" secondAttribute="centerY" id="plC-xe-Yep"/>
+                            <constraint firstItem="XWR-2j-fIl" firstAttribute="top" secondItem="OTS-gm-ZbQ" secondAttribute="top" constant="60" id="ssY-vC-1hT"/>
+                            <constraint firstItem="OTS-gm-ZbQ" firstAttribute="trailing" secondItem="3Tk-LP-YY0" secondAttribute="trailing" constant="70" id="wYX-Xv-b66"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OTS-gm-ZbQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="addFavoritCollectionView" destination="XWR-2j-fIl" id="SIj-hW-gV6"/>
+                        <outlet property="timePickerView" destination="Spz-MB-sJA" id="9J3-lL-lXW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4A-hZ-1db" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.75362318840581" y="215.21739130434784"/>
+        </scene>
+    </scenes>
+</document>
