@@ -23,12 +23,4 @@ class ContentVideoCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var viewData: ContentVideoViewData? {
-        didSet {
-            firstCategoryView.layer.cornerRadius = firstCategoryView.frame.height / 2
-            secondCategoryView.layer.cornerRadius = secondCategoryView.frame.height / 2
-            thirdCategoryView.layer.cornerRadius = thirdCategoryView.frame.height / 2
-        }
-    }
-    
 }

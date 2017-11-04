@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class Content {
+    
+    var linkUrl: String = ""
+    var imageUrl: String = ""
+    var timeDuration: String = ""
+    var speakerName: String = ""
+    var title: String = ""
+    var rated: [String] = []
+    
+    var image: String = ""
+    
+}
+
