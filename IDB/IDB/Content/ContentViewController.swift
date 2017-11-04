@@ -28,7 +28,7 @@ class ContentViewController: UIViewController, IndicatorInfoProvider {
     
     func loadHistoryList() {
         
-        APIManager.request(apiRequest: HistoryAPI.load) { [weak self] result in
+        APIManager.request(apiRequest: ContentAPI.home(params: [:])) { [weak self] result in
             switch result {
             case .success(let response):
                 guard let cotentCount = response.dictionaryValue["items"]?.array?.count else {
@@ -75,6 +75,10 @@ extension ContentViewController: UITableViewDelegate, UITableViewDataSource {
         if let imageData: Data = try? Data(contentsOf: URL(string: content.imageUrl)!){
             cell.thumbnailImageView.image = UIImage(data: imageData)
         }
+        
+        cell.firstCategoryView.isHidden = true
+        cell.secondCategoryView.isHidden = true
+        cell.thirdCategoryView.isHidden = true
         
         if ratedCount > 0 {
             cell.firstCategoryView.isHidden = false
