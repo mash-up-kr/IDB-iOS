@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--History View Controller-->
         <scene sceneID="grD-fD-Ul1">
             <objects>
-                <viewController id="f33-3T-SHd" customClass="HomeViewController" customModule="IDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f33-3T-SHd" customClass="HistoryViewController" customModule="IDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="veG-g1-axN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,11 +83,7 @@
                                             <rect key="frame" x="0.0" y="64" width="375" height="128"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-XC-byQ">
-                                                    <rect key="frame" x="52" y="0.0" width="116" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s86-Jk-WHr">
-                                                    <rect key="frame" x="176" y="0.0" width="107" height="128"/>
+                                                    <rect key="frame" x="8" y="43" width="58" height="85"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAO-sa-kuI">
@@ -97,6 +93,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s86-Jk-WHr">
+                                                    <rect key="frame" x="139" y="37" width="52" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.64815021581549792" green="0.83186752414333642" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -116,7 +117,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="historyView" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ejW-mI-fjK" customClass="HistoryViewCell" customModule="IDB" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="historyCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="100" id="ejW-mI-fjK" customClass="HistoryViewCell" customModule="IDB" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="220" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ejW-mI-fjK" id="Gi1-ug-pN5">
@@ -147,7 +148,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13 : 35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqF-7Y-gGU">
-                                                    <rect key="frame" x="325" y="18" width="38" height="21"/>
+                                                    <rect key="frame" x="325" y="17" width="38" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
@@ -155,6 +156,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="speakerLabel" destination="ypt-bD-iHD" id="bvA-Xy-R7o"/>
+                                            <outlet property="thumnailImageView" destination="G0E-N9-B05" id="5tr-Y9-sTR"/>
+                                            <outlet property="timeLabel" destination="BqF-7Y-gGU" id="wjF-yi-fwX"/>
+                                            <outlet property="titleLabel" destination="839-OP-6zI" id="qAp-4S-TWg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -172,6 +179,8 @@
                         <viewLayoutGuide key="safeArea" id="SP3-OS-Exo"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="s86-Jk-WHr" id="5S8-jd-UxI"/>
+                        <outlet property="navigationView" destination="qom-gY-QKv" id="lHu-tP-epg"/>
                         <outlet property="tableView" destination="h8U-bf-lsa" id="eoD-al-Bjf"/>
                     </connections>
                 </viewController>
